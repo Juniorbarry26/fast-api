@@ -8,11 +8,11 @@ class Student(Base):
     __tablename__ = "students"
 
     id = Column(Integer, primary_key=True, index=True)
-    first_name = Column(String, index=True)
-    last_name = Column(String, index=True)
-    mat_number = Column(String, unique=True, index=True)
-    major = Column(String, index=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    mat_number = Column(String, unique=True)
+    major = Column(String)
     age = Column(Integer)
-    email = Column(String, unique=True, index=True)
-    phone_number = Column(String, unique=True, index=True)
-    address = Column(String)
+    email = Column(String(255), unique=True)
+    phone_number = Column(String(20), unique=True)
+    address = Column(String(500))
